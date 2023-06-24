@@ -52,6 +52,12 @@ DEPLOYER_CONTRACT_ADDR=0x...
 
 You will need to deploy the contract in `/contracts/` which will act as your minting contract. This contract is very basic and emits a `Mint(address minter, uint256 amount, uint256 startID, uint256 endID)` event. Do not remove this event or the bot will not work properly! It relies on listening to this. You can change the function to do whatever logic you like, but this event **MUST** be emitted properly in order for the bot to work. It's best to leave the logic that relates to this event _alone_.
 
+### Setting up token data
+
+**YOU MUST SET THIS UP IF YOU WANT IT TO ETHSCRIBE THE CORRECT TOKEN DATA. DO NOT SKIP OVER THIS!!**
+
+In the `./src/directory.json` you can input a dictionary of `{ "tokenID": "iVBORw0KGgoAA..." }` and this will be loaded to ethscribe on each mint. The key value with be the tokenID as a string, and the value itself should be the base64encoded PNG you are trying to ethscribe! The bot will handle the rest of the encoding for you.
+
 #### Running the listener
 
 Once you have deployed the contract, installed requirements, and filled out your `.env` file, you can run the bot with:
