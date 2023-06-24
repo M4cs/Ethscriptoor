@@ -20,6 +20,7 @@ I wanted a way to setup a minting experience similar to the one we are used to w
 - Hasn't been run at high scale
 - Doesn't account for fluctuating gas prices
 - May require a node to run for large volume of minters
+- In-Memory Queue system, could use Redis or something similar instead
 
 ### Requirements
 
@@ -62,3 +63,33 @@ yarn start
 ### How to host the bot easily
 
 I setup a Google Compute Engine instance with a service worker to run the bot and restart it on fail. This can easily be done with the help of ChatGPT or a quick Google Search. You can also deploy it on a VPS, or use any sort of platform that can run a background script without you having to keep it open. If you run it on a server, use tmux or screen or something along those lines!
+
+### Contributions
+
+Please feel free to contribute! The queue system could be improved by using redis or something along the lines, this is very basic and light weight.
+
+### License
+
+```
+MIT License
+
+Copyright (c) 2023 Max Bridgland
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
